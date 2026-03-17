@@ -33,23 +33,26 @@ class AtreidesTrader:
     
     async def run(self):
         """Main async trading loop."""
-        await self.client.load_markets()
-        
-        # Set leverage
         try:
-            await self.client.exchange.set_leverage(self.leverage, self.symbol)
-            logger.info(f"Leverage set to {self.leverage}x")
-        except Exception as e:
-            logger.warning(f"Leverage setting skipped: {e}")
-        
-        while True:
+            await self.client.load_markets()
+            
+            # Set leverage
             try:
-                await self._trading_cycle()
+                await self.client.exchange.set_leverage(self.leverage, self.symbol)
+                logger.info(f"Leverage set to {self.leverage}x")
             except Exception as e:
-                logger.error(f"Critical error in trading cycle: {e}")
-            finally:
-                # Sleep moved outside try/except to prevent API spamming during crashes
-                await asyncio.sleep(60)
+                logger.warning(f"Leverage setting skipped: {e}")
+            
+            while True:
+                try:
+                    await self._trading_cycle()
+                except Exception as e:
+                    logger.error(f"Critical error in trading cycle: {e}")
+                finally:
+                    # Sleep moved outside try/except to prevent API spamming during crashes
+                    await asyncio.sleep(60)
+        finally:
+            await self.client.exchange.close()
     
     async def _trading_cycle(self):
         """Single trading cycle: Data → AI → Execution."""
