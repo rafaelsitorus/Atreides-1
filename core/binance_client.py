@@ -23,6 +23,12 @@ class BinanceClient:
             'options': {
                 'defaultType': 'future',
                 'adjustForTimeDifference': True
+            },
+            'urls': {
+                'api': {
+                    'fapiPublic': 'https://testnet.binancefuture.com/fapi/v1',
+                    'fapiPrivate': 'https://testnet.binancefuture.com/fapi/v1'
+                }
             }
         })
         if sandbox:
@@ -51,6 +57,15 @@ class BinanceClient:
         ohlcv = await self.exchange.fetch_ohlcv(symbol, timeframe, limit=limit)
         df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
         return df
+    
+    async def get_balance(self):
+        """
+        Fetch account balance using swap type to avoid SAPI timeout.
+        
+        Returns:
+            Balance data from exchange
+        """
+        return await self.exchange.fetch_balance(params={'type': 'swap'})
     
     def get_precision(self, symbol: str) -> Dict[str, int]:
         """Get amount and price precision for symbol."""
