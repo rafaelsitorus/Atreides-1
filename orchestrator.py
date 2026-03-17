@@ -45,10 +45,10 @@ class AtreidesTrader:
         while True:
             try:
                 await self._trading_cycle()
-                await asyncio.sleep(60)  # 1 minute between cycles
-                
             except Exception as e:
                 logger.error(f"Critical error in trading cycle: {e}")
+            finally:
+                # Sleep moved outside try/except to prevent API spamming during crashes
                 await asyncio.sleep(60)
     
     async def _trading_cycle(self):

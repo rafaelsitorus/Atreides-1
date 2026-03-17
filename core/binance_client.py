@@ -23,16 +23,19 @@ class BinanceClient:
             'options': {
                 'defaultType': 'future',
                 'adjustForTimeDifference': True
-            },
-            'urls': {
-                'api': {
-                    'fapiPublic': 'https://testnet.binancefuture.com/fapi/v1',
-                    'fapiPrivate': 'https://testnet.binancefuture.com/fapi/v1'
-                }
             }
         })
+        
+        # Manual URL override for Testnet (Total Override)
+        # Deprecated set_sandbox_mode() removed to prevent NotSupported errors
         if sandbox:
-            self.exchange.set_sandbox_mode(True)
+            self.exchange.urls['api']['fapiPublic'] = 'https://testnet.binancefuture.com/fapi/v1'
+            self.exchange.urls['api']['fapiPrivate'] = 'https://testnet.binancefuture.com/fapi/v1'
+            self.exchange.urls['api']['public'] = 'https://testnet.binancefuture.com/fapi/v1'
+            self.exchange.urls['api']['private'] = 'https://testnet.binancefuture.com/fapi/v1'
+            self.exchange.urls['api']['fapiPublicV2'] = 'https://testnet.binancefuture.com/fapi/v2'
+            self.exchange.urls['api']['fapiPrivateV2'] = 'https://testnet.binancefuture.com/fapi/v2'
+        
         self.markets: Optional[Dict] = None
     
     async def load_markets(self):
