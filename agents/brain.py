@@ -1,6 +1,10 @@
 """
 agents/brain.py
-Fase 3C — DeepSeek R1 Cognitive Engine dengan News & Sentiment NLP context.
+Fase 3 Complete — DeepSeek R1 dengan:
+1. JSON structured output (regime + confidence + reasoning)
+2. Multi-timeframe analysis (15m + 1h + 4h)
+3. Derivatives context (funding rate + open interest)
+4. 5-source sentiment (Fear&Greed + News + Reddit + OI + OBI)
 """
 from openai import AsyncOpenAI
 from typing import Literal, TypedDict, Optional
@@ -23,9 +27,9 @@ class RegimeAnalysis(TypedDict):
 def _compute_indicators(data: pd.DataFrame) -> dict:
     """Hitung semua indikator teknikal dari satu timeframe."""
     recent = data.tail(20).copy()
-    close = recent['close']
-    high = recent['high']
-    low = recent['low']
+    close  = recent['close']
+    high   = recent['high']
+    low    = recent['low']
     volume = recent['volume']
 
     ema8  = close.ewm(span=8).mean().iloc[-1]
@@ -34,9 +38,9 @@ def _compute_indicators(data: pd.DataFrame) -> dict:
     atr   = (high - low).rolling(14).mean().iloc[-1]
 
     current_price = close.iloc[-1]
-    atr_pct    = (atr / current_price) * 100
-    change_pct = ((current_price - close.iloc[0]) / close.iloc[0]) * 100
-    volume_ratio = volume.iloc[-1] / volume.mean()
+    atr_pct       = (atr / current_price) * 100
+    change_pct    = ((current_price - close.iloc[0]) / close.iloc[0]) * 100
+    volume_ratio  = volume.iloc[-1] / volume.mean()
 
     delta = close.diff()
     gain  = delta.clip(lower=0).rolling(14).mean().iloc[-1]
@@ -56,8 +60,8 @@ def _compute_indicators(data: pd.DataFrame) -> dict:
 
 class Brain:
     """
-    Fase 3C Cognitive Engine.
-    DeepSeek R1 dengan multi-TF + derivatives + news sentiment context.
+    Cognitive engine Atreides-1 — Fase 3 Complete.
+    DeepSeek R1 dengan multi-TF + derivatives + 5-source sentiment + OBI.
     """
 
     def __init__(self, api_key: str):
@@ -65,7 +69,7 @@ class Brain:
             base_url="https://openrouter.ai/api/v1",
             api_key=api_key
         )
-        self.model = "deepseek/deepseek-r1"
+        self.model         = "deepseek/deepseek-r1"
         self.min_confidence = MIN_CONFIDENCE
 
     # ------------------------------------------------------------------ #
@@ -80,7 +84,7 @@ class Brain:
         ema_bull     = ind['ema8'] > ind['ema21']
 
         if atr_pct < 0.3:
-            regime, confidence = 'SIDEWAYS', 0.6
+            regime, confidence = 'SIDEWAYS', 0.60
             reasoning = f"ATR% {atr_pct:.3f} below threshold — too quiet"
         elif ema_bull and change_pct > 0.5 and volume_ratio > 1.0:
             regime, confidence = 'BULL', 0.70
@@ -111,11 +115,11 @@ class Brain:
         open_interest_change: Optional[float],
         sentiment_context: str = "",
     ) -> str:
-        """
-        Bangun prompt komprehensif — multi-TF + derivatives + news sentiment.
-        """
-        funding_str = f"{funding_rate*100:.4f}%" if funding_rate is not None else "N/A"
-        oi_str = f"{open_interest_change:+.2f}%" if open_interest_change is not None else "N/A"
+        """Prompt komprehensif — multi-TF + derivatives + 5-source sentiment + OBI."""
+        funding_str = (f"{funding_rate*100:.4f}%"
+                       if funding_rate is not None else "N/A")
+        oi_str      = (f"{open_interest_change:+.2f}%"
+                       if open_interest_change is not None else "N/A")
 
         funding_sentiment = "NEUTRAL"
         if funding_rate is not None:
@@ -125,9 +129,9 @@ class Brain:
                 funding_sentiment = "OVERLEVERAGED_SHORT (bullish contrarian)"
 
         return f"""You are DeepSeek-R1, a Senior Quantitative Analyst for a crypto futures trading system.
-Analyze ALL available data below to determine the current market regime.
+Analyze ALL data below. Pay special attention to Order Book Imbalance (OBI) as it is the most real-time signal.
 
-=== MULTI-TIMEFRAME DATA ===
+=== MULTI-TIMEFRAME TECHNICAL DATA ===
 
 [15M — Short-term momentum]
 Price: ${tf_15m['price']:.4f}
@@ -153,24 +157,25 @@ Open Interest Change (1h): {oi_str}
 
 {sentiment_context}
 
-=== YOUR TASK ===
-Synthesize ALL data sources — technical, derivatives, AND sentiment.
-Sentiment confirmation raises confidence. Sentiment contradiction lowers it.
-High confidence requires timeframe alignment + sentiment alignment.
+=== SYNTHESIS INSTRUCTIONS ===
+1. Start with 1H/4H timeframe alignment (primary weight: 70%)
+2. Check OBI — does order book confirm or contradict technical?
+3. Cross-reference macro sentiment (Fear&Greed, News, Reddit)
+4. High confidence REQUIRES: 2/3 TF aligned + OBI confirmation
 
 Output ONLY a valid JSON object — no markdown, no text outside JSON:
 
 {{
   "regime": "BULL" | "BEAR" | "SIDEWAYS",
   "confidence": <float 0.0-1.0>,
-  "reasoning": "<2-3 sentence synthesis of technical + sentiment factors>"
+  "reasoning": "<2-3 sentences: technical alignment + OBI + sentiment synthesis>"
 }}
 
 Confidence guide:
-- 0.90-1.00: All 3 TF aligned + derivatives + sentiment all agree
-- 0.75-0.89: 2/3 TF aligned + weak sentiment confirmation
-- 0.50-0.74: Mixed signals — lean SIDEWAYS
-- 0.00-0.49: Conflicting signals — must return SIDEWAYS"""
+- 0.90-1.00: All 3 TF + OBI + sentiment all agree
+- 0.75-0.89: 2/3 TF aligned + OBI confirms
+- 0.60-0.74: Mixed TF but OBI strong — lean toward OBI direction
+- 0.00-0.59: Conflicting signals — SIDEWAYS"""
 
     # ------------------------------------------------------------------ #
     # Main analysis                                                        #
@@ -186,16 +191,7 @@ Confidence guide:
         sentiment_context: str = "",
     ) -> RegimeAnalysis:
         """
-        Analisis regime — multi-TF + derivatives + news sentiment.
-
-        Args:
-            data_15m/1h/4h: OHLCV DataFrames
-            funding_rate: Binance funding rate
-            open_interest_change: OI change % per jam
-            sentiment_context: Pre-formatted string dari NewsFetcher
-
-        Returns:
-            RegimeAnalysis dengan regime, confidence, reasoning, source
+        Analisis regime — multi-TF + derivatives + 5-source sentiment + OBI.
         """
         tf_15m = _compute_indicators(data_15m)
         tf_1h  = _compute_indicators(data_1h)
@@ -220,12 +216,12 @@ Confidence guide:
                 logger.warning("R1 returned None — fallback TA")
                 return self._fallback_regime(tf_1h)
 
-            # Strip <think>...</think> tags dari R1
+            # Strip <think>...</think> dari R1
             clean = re.sub(r'<think>.*?</think>', '', raw, flags=re.DOTALL).strip()
 
             json_match = re.search(r'\{.*\}', clean, re.DOTALL)
             if not json_match:
-                logger.warning(f"No JSON in R1 response — fallback")
+                logger.warning("No JSON in R1 response — fallback")
                 return self._fallback_regime(tf_1h)
 
             parsed     = json.loads(json_match.group())
@@ -245,12 +241,12 @@ Confidence guide:
                 )
                 regime = 'SIDEWAYS'
 
-            has_sentiment = bool(sentiment_context)
             logger.info(
-                f"R1 Analysis: {regime} | Confidence: {confidence:.0%} | "
-                f"15m: {tf_15m['ema_signal']} | 1h: {tf_1h['ema_signal']} | "
+                f"R1 Analysis: {regime} | Conf: {confidence:.0%} | "
+                f"15m: {tf_15m['ema_signal']} | "
+                f"1h: {tf_1h['ema_signal']} | "
                 f"4h: {tf_4h['ema_signal']} | "
-                f"News: {'✅' if has_sentiment else '⚪'}"
+                f"OBI: {'✅' if 'OBI' in sentiment_context else '⚪'}"
             )
             logger.debug(f"R1 Reasoning: {reasoning}")
 

@@ -398,12 +398,14 @@ class AtreidesTrader:
             fg     = sentiment_ctx.get('fear_greed', {})
             news   = sentiment_ctx.get('news', {})
             reddit = sentiment_ctx.get('reddit', {})
+            obi    = sentiment_ctx.get('obi', {})
             logger.info(
                 f"[{symbol}] Sentiment: "
                 f"F&G={fg.get('value',50)}/100 | "
                 f"News={news.get('sentiment','N/A')} | "
                 f"Reddit={reddit.get('sentiment','N/A')} | "
-                f"OI={sentiment_ctx.get('oi_sentiment',{}).get('signal','N/A')}"
+                f"OI={sentiment_ctx.get('oi_sentiment',{}).get('signal','N/A')} | "
+                f"OBI={obi.get('obi',0.0):+.3f}({obi.get('signal','N/A')})"
             )
 
             # 3. R1 analysis — semua data masuk sekaligus
