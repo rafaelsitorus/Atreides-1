@@ -9,17 +9,26 @@ MarketRegime = Literal['BULL', 'BEAR', 'SIDEWAYS']
 class Brain:
     """AI Intelligence untuk market regime analysis via OpenRouter."""
 
-    def __init__(self, api_key: str, model: str = "qwen/qwen3-coder:free"):
+    def __init__(self, api_key: str):
         """
         Args:
             api_key: OpenRouter API key
-            model: Model OpenRouter yang digunakan
         """
         self.client = AsyncOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=api_key
         )
-        self.model = model
+        # Rotasi model jika satu rate limit
+        self.models = [
+            "qwen/qwen3-coder:free",
+            "meta-llama/llama-3.3-70b-instruct:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+        ]
+        self.current_model_idx = 0
+
+    @property
+    def model(self):
+        return self.models[self.current_model_idx]
 
     async def analyze_regime(self, data: pd.DataFrame) -> MarketRegime:
         """
@@ -101,5 +110,10 @@ Reply with exactly one word: BULL, BEAR, or SIDEWAYS"""
             return result
 
         except Exception as e:
+            if '429' in str(e):
+                # Rotasi ke model berikutnya
+                self.current_model_idx = (self.current_model_idx + 1) % len(self.models)
+                logger.warning(f"Rate limit — switching to {self.model}")
+                return 'SIDEWAYS'  # Skip cycle ini, model baru dipakai cycle berikutnya
             logger.error(f"AI analysis failed: {e}")
             return 'SIDEWAYS'

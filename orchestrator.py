@@ -45,12 +45,13 @@ class AtreidesTrader:
             except Exception as e:
                 logger.warning(f"Leverage skip {symbol}: {e}")
 
-        logger.info(f"🔄 Starting concurrent trading loop for {len(self.symbols)} symbols...")
+        logger.info(f"🔄 Starting sequential trading loop for {len(self.symbols)} symbols...")
 
         while True:
-            # Jalankan semua symbol secara bersamaan
-            tasks = [self._trading_cycle(symbol) for symbol in self.symbols]
-            await asyncio.gather(*tasks, return_exceptions=True)
+            # Jalankan semua symbol secara sequential dengan delay
+            for symbol in self.symbols:
+                await self._trading_cycle(symbol)
+                await asyncio.sleep(10)  # delay 10 detik antar symbol
             await asyncio.sleep(60)
 
     async def _has_open_position(self, symbol: str) -> bool:
