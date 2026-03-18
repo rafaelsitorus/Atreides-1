@@ -77,6 +77,29 @@ class AtreidesTrader:
         position_value = usdt_balance * self.risk_percent / 100
         amount = position_value / current_price
         
+        # Round amount using BinanceClient precision
+        amount = self.client.round_amount(self.symbol, amount)
+        
+        # Safety check: Ensure minimum amount
+        min_amount = 0.001  # Default fallback
+        try:
+            # Try to get from market limits if available
+            market = self.client.exchange.markets.get(self.symbol, {})
+            if market and 'limits' in market and 'amount' in market['limits']:
+                min_amount = market['limits']['amount'].get('min', 0.001)
+        except Exception:
+            pass
+        
+        if amount < min_amount:
+            logger.warning(f"Calculated amount {amount} below minimum {min_amount}. Using minimum.")
+            amount = min_amount
+        
+        # Check if we have sufficient balance for minimum position
+        required_balance = amount * current_price
+        if usdt_balance < required_balance:
+            logger.error(f"Insufficient balance. Required: {required_balance:.2f} USDT, Available: {usdt_balance:.2f} USDT")
+            return
+        
         # ATR-based Stop Loss (2x ATR)
         atr = (data['high'] - data['low']).rolling(14).mean().iloc[-1]
         
