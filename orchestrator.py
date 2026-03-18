@@ -78,7 +78,8 @@ class AtreidesTrader:
         amount = position_value / current_price
         
         # Get min_amount dynamically
-        min_amount = self.client.exchange.markets[self.symbol]['limits']['amount']['min']
+        market_info = self.client.exchange.market(self.symbol)
+        min_amount = market_info['limits']['amount']['min']
         
         # Use max function to enforce minimum
         final_amount = max(self.client.round_amount(self.symbol, amount), min_amount)
