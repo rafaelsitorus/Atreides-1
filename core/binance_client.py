@@ -26,15 +26,9 @@ class BinanceClient:
             }
         })
         
-        # Manual URL override for Testnet (Total Override)
         # Deprecated set_sandbox_mode() removed to prevent NotSupported errors
         if sandbox:
-            self.exchange.urls['api']['fapiPublic'] = 'https://testnet.binancefuture.com/fapi/v1'
-            self.exchange.urls['api']['fapiPrivate'] = 'https://testnet.binancefuture.com/fapi/v1'
-            self.exchange.urls['api']['public'] = 'https://testnet.binancefuture.com/fapi/v1'
-            self.exchange.urls['api']['private'] = 'https://testnet.binancefuture.com/fapi/v1'
-            self.exchange.urls['api']['fapiPublicV2'] = 'https://testnet.binancefuture.com/fapi/v2'
-            self.exchange.urls['api']['fapiPrivateV2'] = 'https://testnet.binancefuture.com/fapi/v2'
+            self.exchange.enable_demo_trading(True)
         
         self.markets: Optional[Dict] = None
     

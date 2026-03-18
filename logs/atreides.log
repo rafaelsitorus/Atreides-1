@@ -1,0 +1,713 @@
+[2026-03-19 03:30:49] 🚀 Starting run #1...
+[2026-03-19 03:30:49] PID: 73636
+2026-03-19 03:30:51.010 | INFO     | __main__:__init__:33 - 🚀 Atreides-1 System Initialized
+2026-03-19 03:30:51.010 | INFO     | __main__:__init__:34 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 1h | Lev: 5x | RR: 1:2.0
+2026-03-19 03:30:51.624 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 03:30:51.756 | INFO     | __main__:run:44 - Leverage 5x set for BTC/USDT
+2026-03-19 03:30:51.891 | INFO     | __main__:run:44 - Leverage 5x set for ETH/USDT
+2026-03-19 03:30:52.025 | INFO     | __main__:run:44 - Leverage 5x set for SOL/USDT
+2026-03-19 03:30:52.025 | INFO     | __main__:run:48 - 🔄 Starting concurrent trading loop for 3 symbols...
+2026-03-19 03:30:52.026 | INFO     | __main__:_trading_cycle:110 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:30:52.026 | INFO     | __main__:_trading_cycle:110 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:30:52.026 | INFO     | __main__:_trading_cycle:110 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:30:55.711 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-coder-480b-a35b-07-25/a9bbd882-011f-4606-8f60-85f3cb642586. High demand for qwen/qwen3-coder:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1773865860000'}, 'provider_name': None}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:30:55.712 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:30:55.787 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:30:55.787 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:30:55.806 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:30:55.806 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:31:55.818 | INFO     | __main__:_trading_cycle:110 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:31:55.821 | INFO     | __main__:_trading_cycle:110 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:31:55.821 | INFO     | __main__:_trading_cycle:110 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:31:59.584 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:31:59.585 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:31:59.587 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:31:59.587 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:31:59.812 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-coder-480b-a35b-07-25/a9bbd882-011f-4606-8f60-85f3cb642586. High demand for qwen/qwen3-coder:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1773865920000'}, 'provider_name': None}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:31:59.812 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:32:59.817 | INFO     | __main__:_trading_cycle:110 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:32:59.820 | INFO     | __main__:_trading_cycle:110 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:32:59.820 | INFO     | __main__:_trading_cycle:110 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:33:03.466 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-coder-480b-a35b-07-25/a9bbd882-011f-4606-8f60-85f3cb642586. High demand for qwen/qwen3-coder:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1773866040000'}, 'provider_name': None}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:33:03.466 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:33:03.530 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:33:03.530 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:33:03.531 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:33:03.531 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:34:03.533 | INFO     | __main__:_trading_cycle:110 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:34:03.534 | INFO     | __main__:_trading_cycle:110 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:34:03.534 | INFO     | __main__:_trading_cycle:110 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:34:07.362 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-coder-480b-a35b-07-25/a9bbd882-011f-4606-8f60-85f3cb642586. High demand for qwen/qwen3-coder:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1773866100000'}, 'provider_name': None}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:34:07.362 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:34:07.509 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:34:07.510 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:34:07.581 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:34:07.581 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:35:07.584 | INFO     | __main__:_trading_cycle:110 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:35:07.584 | INFO     | __main__:_trading_cycle:110 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:35:07.584 | INFO     | __main__:_trading_cycle:110 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:35:11.137 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:35:11.137 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:35:11.424 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:35:11.424 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:35:11.516 | ERROR    | agents.brain:analyze_regime:104 - AI analysis failed: Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-coder-480b-a35b-07-25/a9bbd882-011f-4606-8f60-85f3cb642586. High demand for qwen/qwen3-coder:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1773866160000'}, 'provider_name': None}}, 'user_id': 'user_3B3XmzVSPbzBlDXoAf7qohZZxjj'}
+2026-03-19 03:35:11.516 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Market sideways — skip
+[2026-03-19 03:38:20] 🚀 Starting run #1...
+[2026-03-19 03:38:20] PID: 73789
+2026-03-19 03:38:22.110 | INFO     | __main__:__init__:32 - 🚀 Atreides-1 System Initialized
+2026-03-19 03:38:22.110 | INFO     | __main__:__init__:33 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 1h | Lev: 5x | RR: 1:2.0
+2026-03-19 03:38:22.768 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 03:38:22.903 | INFO     | __main__:run:42 - Leverage 5x set for BTC/USDT
+2026-03-19 03:38:23.032 | INFO     | __main__:run:42 - Leverage 5x set for ETH/USDT
+2026-03-19 03:38:23.162 | INFO     | __main__:run:42 - Leverage 5x set for SOL/USDT
+2026-03-19 03:38:23.163 | INFO     | __main__:run:46 - 🔄 Starting sequential trading loop for 3 symbols...
+2026-03-19 03:38:23.163 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:38:26.724 | WARNING  | agents.brain:_rotate_model:34 - Rate limit on qwen/qwen3-coder:free — switching to meta-llama/llama-3.3-70b-instruct:free
+2026-03-19 03:38:26.725 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:38:41.726 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:38:45.584 | WARNING  | agents.brain:_rotate_model:34 - Rate limit on meta-llama/llama-3.3-70b-instruct:free — switching to nvidia/nemotron-3-super-120b-a12b:free
+2026-03-19 03:38:45.584 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:39:00.585 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:39:09.251 | ERROR    | agents.brain:analyze_regime:99 - AI analysis failed: 'NoneType' object has no attribute 'strip'
+2026-03-19 03:39:09.251 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:39:39.255 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:39:40.762 | ERROR    | agents.brain:analyze_regime:99 - AI analysis failed: 'NoneType' object has no attribute 'strip'
+2026-03-19 03:39:40.762 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:39:55.764 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:40:04.976 | ERROR    | agents.brain:analyze_regime:99 - AI analysis failed: 'NoneType' object has no attribute 'strip'
+2026-03-19 03:40:04.976 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:40:19.979 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:40:22.456 | ERROR    | agents.brain:analyze_regime:99 - AI analysis failed: 'NoneType' object has no attribute 'strip'
+2026-03-19 03:40:22.457 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 03:40:52.462 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:40:53.961 | ERROR    | agents.brain:analyze_regime:99 - AI analysis failed: 'NoneType' object has no attribute 'strip'
+2026-03-19 03:40:53.961 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+[2026-03-19 03:42:47] 🚀 Starting run #1...
+[2026-03-19 03:42:47] PID: 73934
+2026-03-19 03:42:49.354 | INFO     | __main__:__init__:32 - 🚀 Atreides-1 System Initialized
+2026-03-19 03:42:49.354 | INFO     | __main__:__init__:33 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 1h | Lev: 5x | RR: 1:2.0
+2026-03-19 03:42:49.979 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 03:42:50.114 | INFO     | __main__:run:42 - Leverage 5x set for BTC/USDT
+2026-03-19 03:42:50.244 | INFO     | __main__:run:42 - Leverage 5x set for ETH/USDT
+2026-03-19 03:42:50.373 | INFO     | __main__:run:42 - Leverage 5x set for SOL/USDT
+2026-03-19 03:42:50.373 | INFO     | __main__:run:46 - 🔄 Starting sequential trading loop for 3 symbols...
+2026-03-19 03:42:50.373 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:43:28.413 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-3.90% | Vol: 1.00x
+2026-03-19 03:43:28.414 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 03:43:43.415 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:43:54.027 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.13% | Vol: 0.91x
+2026-03-19 03:43:54.028 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:44:09.030 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:44:16.483 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.75% | Vol: 2.06x
+2026-03-19 03:44:17.060 | DEBUG    | __main__:_dynamic_position_size:94 - [SOL/USDT] Dynamic sizing: ATR%=0.020 | VolFactor=0.50 | Risk=$627.63
+2026-03-19 03:44:17.062 | INFO     | __main__:_trading_cycle:155 - 🔴 [SOL/USDT] SHORT | Entry: ~$89.88 | SL: $93.46
+2026-03-19 03:44:17.245 | INFO     | core.risk_manager:execute_atomic_order:67 - Entry order placed: 1797975384 | Side: SELL | Amount: 6.98 | Fill: ~89.84
+2026-03-19 03:44:17.539 | INFO     | core.risk_manager:execute_atomic_order:89 - Stop Loss placed at 93.46: 1000000028822972
+2026-03-19 03:44:17.691 | INFO     | core.risk_manager:execute_atomic_order:103 - Take Profit placed at 82.6: 1000000028822975 | RR: 1:2.0
+2026-03-19 03:44:17.691 | INFO     | __main__:_trading_cycle:166 - ✅ [SOL/USDT] Order executed | SL: $93.46 | TP: $82.60 | RR: 1:2.0
+2026-03-19 03:44:47.694 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:44:56.018 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.90% | Vol: 1.02x
+2026-03-19 03:44:56.340 | DEBUG    | __main__:_dynamic_position_size:94 - [BTC/USDT] Dynamic sizing: ATR%=0.008 | VolFactor=1.00 | Risk=$1217.55
+2026-03-19 03:44:56.340 | INFO     | __main__:_trading_cycle:155 - 🔴 [BTC/USDT] SHORT | Entry: ~$71150.00 | SL: $72237.29
+2026-03-19 03:44:56.504 | INFO     | core.risk_manager:execute_atomic_order:67 - Entry order placed: 12867197152 | Side: SELL | Amount: 0.017 | Fill: ~71145.00
+2026-03-19 03:44:56.800 | INFO     | core.risk_manager:execute_atomic_order:89 - Stop Loss placed at 72237.3: 1000000028823372
+2026-03-19 03:44:56.943 | INFO     | core.risk_manager:execute_atomic_order:103 - Take Profit placed at 68960.4: 1000000028823375 | RR: 1:2.0
+2026-03-19 03:44:56.943 | INFO     | __main__:_trading_cycle:166 - ✅ [BTC/USDT] Order executed | SL: $72237.30 | TP: $68960.40 | RR: 1:2.0
+2026-03-19 03:45:11.947 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:45:20.655 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.16% | Vol: 0.93x
+2026-03-19 03:45:20.657 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:45:35.659 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:46:02.032 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.75% | Vol: 2.06x
+2026-03-19 03:46:02.404 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🟢 PnL: $0.4188
+2026-03-19 03:46:02.405 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:46:32.411 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:46:55.463 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.91% | Vol: 1.02x
+2026-03-19 03:46:55.819 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-0.3264
+2026-03-19 03:46:55.819 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:47:10.823 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:47:38.282 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.23% | Vol: 0.98x
+2026-03-19 03:47:38.282 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:47:53.285 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:48:19.990 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.86% | Vol: 2.06x
+2026-03-19 03:48:20.352 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🟢 PnL: $0.9403
+2026-03-19 03:48:20.352 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:48:50.355 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:48:58.151 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.92% | Vol: 1.06x
+2026-03-19 03:48:58.331 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🟢 PnL: $0.4624
+2026-03-19 03:48:58.332 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:49:13.333 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:49:23.050 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.18% | Vol: 1.00x
+2026-03-19 03:49:23.051 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 03:49:38.052 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:49:47.402 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.87% | Vol: 2.06x
+2026-03-19 03:49:47.597 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🟢 PnL: $0.4188
+2026-03-19 03:49:47.598 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:50:17.601 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:50:46.117 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.91% | Vol: 1.06x
+2026-03-19 03:50:46.480 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-1.1954
+2026-03-19 03:50:46.481 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:51:01.490 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:51:11.395 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-6.25% | Vol: 1.04x
+2026-03-19 03:51:11.717 | DEBUG    | __main__:_dynamic_position_size:94 - [ETH/USDT] Dynamic sizing: ATR%=0.011 | VolFactor=0.88 | Risk=$1014.42
+2026-03-19 03:51:11.718 | INFO     | __main__:_trading_cycle:155 - 🔴 [ETH/USDT] SHORT | Entry: ~$2178.98 | SL: $2228.65
+2026-03-19 03:51:11.930 | INFO     | core.risk_manager:execute_atomic_order:67 - Entry order placed: 8569550939 | Side: SELL | Amount: 0.465 | Fill: ~2186.67
+2026-03-19 03:51:12.227 | INFO     | core.risk_manager:execute_atomic_order:89 - Stop Loss placed at 2228.65: 1000000028828257
+2026-03-19 03:51:12.375 | INFO     | core.risk_manager:execute_atomic_order:103 - Take Profit placed at 2102.71: 1000000028828259 | RR: 1:2.0
+2026-03-19 03:51:12.375 | INFO     | __main__:_trading_cycle:166 - ✅ [ETH/USDT] Order executed | SL: $2228.65 | TP: $2102.71 | RR: 1:2.0
+2026-03-19 03:51:27.378 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:51:36.312 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.87% | Vol: 2.06x
+2026-03-19 03:51:36.500 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-0.7407
+2026-03-19 03:51:36.501 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:52:06.505 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:52:33.220 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.81% | Vol: 1.14x
+2026-03-19 03:52:33.580 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-1.0169
+2026-03-19 03:52:33.580 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:52:48.584 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:52:55.479 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.86% | Vol: 1.16x
+2026-03-19 03:52:55.665 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-0.6973
+2026-03-19 03:52:55.665 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 03:53:10.668 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:53:20.203 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.71% | Vol: 2.09x
+2026-03-19 03:53:20.396 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-0.4886
+2026-03-19 03:53:20.396 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:53:50.400 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:54:01.173 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.81% | Vol: 1.16x
+2026-03-19 03:54:01.367 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-0.9690
+2026-03-19 03:54:01.368 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:54:16.369 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:54:25.813 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.85% | Vol: 1.17x
+2026-03-19 03:54:26.009 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-0.0230
+2026-03-19 03:54:26.010 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 03:54:41.012 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:54:49.469 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.72% | Vol: 2.09x
+2026-03-19 03:54:49.664 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-0.7678
+2026-03-19 03:54:49.664 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:55:19.667 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:55:46.759 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.80% | Vol: 1.16x
+2026-03-19 03:55:47.123 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-1.5997
+2026-03-19 03:55:47.123 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:56:02.124 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:56:26.914 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.87% | Vol: 1.18x
+2026-03-19 03:56:27.279 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-0.6636
+2026-03-19 03:56:27.280 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 03:56:42.282 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:57:02.026 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.65% | Vol: 2.11x
+2026-03-19 03:57:02.388 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-1.0785
+2026-03-19 03:57:02.388 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:57:32.391 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:57:55.242 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.81% | Vol: 1.16x
+2026-03-19 03:57:55.628 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-0.9384
+2026-03-19 03:57:55.628 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:58:10.630 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 03:58:20.614 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.85% | Vol: 1.19x
+2026-03-19 03:58:20.797 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-0.6133
+2026-03-19 03:58:20.797 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 03:58:35.799 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 03:58:44.907 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.65% | Vol: 2.11x
+2026-03-19 03:58:45.097 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-1.0474
+2026-03-19 03:58:45.097 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 03:59:15.100 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 03:59:23.227 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-3.81% | Vol: 1.16x
+2026-03-19 03:59:23.413 | INFO     | __main__:_has_open_position:66 - ⏸️  [BTC/USDT] Posisi aktif: SHORT | 0.017 contracts | 🔴 PnL: $-0.8011
+2026-03-19 03:59:23.413 | INFO     | __main__:_trading_cycle:121 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 03:59:38.416 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:00:00.524 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.86% | Vol: 1.20x
+2026-03-19 04:00:00.887 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-0.0581
+2026-03-19 04:00:00.888 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 04:00:15.890 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:00:38.968 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-4.63% | Vol: 2.12x
+2026-03-19 04:00:39.324 | INFO     | __main__:_has_open_position:66 - ⏸️  [SOL/USDT] Posisi aktif: SHORT | 6.98 contracts | 🔴 PnL: $-0.4188
+2026-03-19 04:00:39.324 | INFO     | __main__:_trading_cycle:121 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 04:01:09.329 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:01:43.663 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.18% | Vol: 0.00x
+2026-03-19 04:01:43.664 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:01:58.667 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:02:45.803 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.08% | Vol: 0.06x
+2026-03-19 04:02:45.803 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:03:00.805 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:03:31.838 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.17% | Vol: 0.01x
+2026-03-19 04:03:31.839 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:04:01.843 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:04:31.695 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.19% | Vol: 0.05x
+2026-03-19 04:04:31.695 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:04:46.698 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:04:58.120 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.00% | Vol: 0.11x
+2026-03-19 04:04:58.121 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:05:13.124 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:05:36.283 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.16% | Vol: 0.01x
+2026-03-19 04:05:36.283 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:06:06.292 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:06:41.718 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.12% | Vol: 0.18x
+2026-03-19 04:06:41.719 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:06:56.720 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:07:04.748 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.96% | Vol: 0.14x
+2026-03-19 04:07:04.748 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:07:19.749 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:07:29.106 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.13% | Vol: 0.03x
+2026-03-19 04:07:29.107 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:07:59.110 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:08:08.628 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.10% | Vol: 0.25x
+2026-03-19 04:08:08.629 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:08:23.631 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:08:32.904 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.91% | Vol: 0.23x
+2026-03-19 04:08:32.905 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:08:47.906 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:09:16.517 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.04% | Vol: 0.09x
+2026-03-19 04:09:16.517 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:09:46.520 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:09:53.727 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.09% | Vol: 0.28x
+2026-03-19 04:09:53.727 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:10:08.724 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:10:17.277 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.91% | Vol: 0.23x
+2026-03-19 04:10:17.277 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:10:32.279 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:10:47.812 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.98% | Vol: 0.11x
+2026-03-19 04:10:47.813 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:11:17.818 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:11:24.829 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.09% | Vol: 0.28x
+2026-03-19 04:11:24.829 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:11:39.832 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:12:09.622 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.98% | Vol: 0.28x
+2026-03-19 04:12:09.622 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:12:24.624 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:12:36.547 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.98% | Vol: 0.11x
+2026-03-19 04:12:36.548 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:13:06.553 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:13:37.246 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.08% | Vol: 0.30x
+2026-03-19 04:13:37.246 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:13:52.249 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:14:01.449 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.89% | Vol: 0.31x
+2026-03-19 04:14:01.449 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:14:16.452 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:14:24.481 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.92% | Vol: 0.27x
+2026-03-19 04:14:24.481 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:14:54.486 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:15:03.723 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.10% | Vol: 0.31x
+2026-03-19 04:15:03.724 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:15:18.726 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:15:48.702 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-6.02% | Vol: 0.39x
+2026-03-19 04:15:48.702 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:16:03.705 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:16:36.080 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.92% | Vol: 0.27x
+2026-03-19 04:16:36.081 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:17:06.086 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:17:17.515 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.14% | Vol: 0.33x
+2026-03-19 04:17:17.515 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:17:32.518 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:18:00.629 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.92% | Vol: 0.43x
+2026-03-19 04:18:00.630 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:18:15.633 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:18:46.482 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.96% | Vol: 0.27x
+2026-03-19 04:18:46.482 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:19:16.487 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:19:51.810 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.11% | Vol: 0.33x
+2026-03-19 04:19:51.811 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:20:06.814 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:20:14.919 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.91% | Vol: 0.51x
+2026-03-19 04:20:14.920 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:20:29.922 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:20:38.105 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.92% | Vol: 0.27x
+2026-03-19 04:20:38.106 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:21:08.111 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:21:17.424 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.08% | Vol: 0.33x
+2026-03-19 04:21:17.424 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:21:32.426 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:22:00.337 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.83% | Vol: 0.56x
+2026-03-19 04:22:00.337 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:22:15.340 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:22:45.539 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.90% | Vol: 0.30x
+2026-03-19 04:22:45.540 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:23:15.545 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:23:24.548 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.11% | Vol: 0.34x
+2026-03-19 04:23:24.548 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:23:39.551 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:23:49.112 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.83% | Vol: 0.56x
+2026-03-19 04:23:49.112 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:24:04.115 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:24:13.875 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.89% | Vol: 0.31x
+2026-03-19 04:24:13.875 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:24:43.881 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:24:55.381 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.08% | Vol: 0.37x
+2026-03-19 04:24:55.381 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:25:10.384 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:25:21.261 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.83% | Vol: 0.56x
+2026-03-19 04:25:21.261 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:25:36.263 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:25:46.401 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.89% | Vol: 0.31x
+2026-03-19 04:25:46.402 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:26:16.406 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:26:23.967 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.07% | Vol: 0.37x
+2026-03-19 04:26:23.967 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:26:38.970 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:26:48.636 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.83% | Vol: 0.58x
+2026-03-19 04:26:48.636 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:27:03.639 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:27:12.702 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.94% | Vol: 0.33x
+2026-03-19 04:27:12.702 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:27:42.711 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:28:11.592 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.20% | Vol: 0.45x
+2026-03-19 04:28:11.593 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:28:26.588 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:28:55.626 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.72% | Vol: 0.67x
+2026-03-19 04:28:55.627 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:29:10.629 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:29:21.321 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.94% | Vol: 0.37x
+2026-03-19 04:29:21.322 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:29:51.326 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:30:09.331 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.20% | Vol: 0.45x
+2026-03-19 04:30:09.332 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:30:24.334 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:30:56.171 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.72% | Vol: 0.70x
+2026-03-19 04:30:56.172 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:31:11.175 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:31:40.488 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.96% | Vol: 0.39x
+2026-03-19 04:31:40.488 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:32:10.499 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:32:38.061 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.21% | Vol: 0.46x
+2026-03-19 04:32:38.061 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:32:53.064 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:33:20.426 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.73% | Vol: 0.70x
+2026-03-19 04:33:20.427 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:33:35.431 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:34:02.509 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.94% | Vol: 0.39x
+2026-03-19 04:34:02.510 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:34:32.515 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:34:42.443 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.21% | Vol: 0.47x
+2026-03-19 04:34:42.444 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:34:57.448 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:35:15.608 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.73% | Vol: 0.73x
+2026-03-19 04:35:15.609 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:35:30.612 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:35:58.364 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.96% | Vol: 0.40x
+2026-03-19 04:35:58.366 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:36:28.372 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:36:53.263 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.21% | Vol: 0.54x
+2026-03-19 04:36:53.264 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:37:08.267 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:37:42.411 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.94% | Vol: 0.82x
+2026-03-19 04:37:42.412 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:37:57.415 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:38:04.900 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.99% | Vol: 0.40x
+2026-03-19 04:38:04.900 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:38:34.906 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:38:44.413 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.20% | Vol: 0.59x
+2026-03-19 04:38:44.414 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:38:59.418 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:39:09.928 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.92% | Vol: 0.84x
+2026-03-19 04:39:09.928 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:39:24.932 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:39:34.097 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.89% | Vol: 0.40x
+2026-03-19 04:39:34.097 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:40:04.103 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:40:33.410 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.16% | Vol: 0.66x
+2026-03-19 04:40:33.411 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:40:48.413 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:41:15.797 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.62% | Vol: 0.94x
+2026-03-19 04:41:15.799 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 04:41:30.801 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:41:58.054 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.70% | Vol: 0.46x
+2026-03-19 04:41:58.055 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:42:28.058 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:42:55.779 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.12% | Vol: 0.66x
+2026-03-19 04:42:55.780 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:43:10.781 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:43:19.364 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.53% | Vol: 1.03x
+2026-03-19 04:43:19.555 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-7.2398
+2026-03-19 04:43:19.555 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 04:43:34.557 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:44:11.232 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.79% | Vol: 0.47x
+2026-03-19 04:44:11.233 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:44:41.237 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:44:52.656 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.06% | Vol: 0.69x
+2026-03-19 04:44:52.657 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:45:07.660 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:45:17.365 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.54% | Vol: 1.04x
+2026-03-19 04:45:17.556 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-5.7918
+2026-03-19 04:45:17.556 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 04:45:32.558 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 04:45:39.816 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.78% | Vol: 0.47x
+2026-03-19 04:45:39.817 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 04:46:09.822 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:46:18.155 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.07% | Vol: 0.69x
+2026-03-19 04:46:18.155 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+[2026-03-19 04:58:45] 🚀 Starting run #1...
+[2026-03-19 04:58:45] PID: 74480
+2026-03-19 04:58:46.942 | INFO     | __main__:__init__:32 - 🚀 Atreides-1 System Initialized
+2026-03-19 04:58:46.942 | INFO     | __main__:__init__:33 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 1h | Lev: 5x | RR: 1:2.0
+2026-03-19 04:58:47.625 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 04:58:47.767 | INFO     | __main__:run:42 - Leverage 5x set for BTC/USDT
+2026-03-19 04:58:47.908 | INFO     | __main__:run:42 - Leverage 5x set for ETH/USDT
+2026-03-19 04:58:48.050 | INFO     | __main__:run:42 - Leverage 5x set for SOL/USDT
+2026-03-19 04:58:48.050 | INFO     | __main__:run:46 - 🔄 Starting sequential trading loop for 3 symbols...
+2026-03-19 04:58:48.050 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 04:59:15.307 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.12% | Vol: 0.74x
+2026-03-19 04:59:15.308 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 04:59:30.309 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 04:59:53.144 | INFO     | agents.brain:analyze_regime:98 - AI Regime: BEAR | EMA: ↓ | Δ-5.38% | Vol: 1.13x
+2026-03-19 04:59:53.843 | INFO     | __main__:_has_open_position:66 - ⏸️  [ETH/USDT] Posisi aktif: SHORT | 0.465 contracts | 🔴 PnL: $-7.3463
+2026-03-19 04:59:53.844 | INFO     | __main__:_trading_cycle:121 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 05:00:08.857 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 05:00:38.396 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.66% | Vol: 0.55x
+2026-03-19 05:00:38.397 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 05:01:08.403 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+2026-03-19 05:01:19.302 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.32% | Vol: 0.03x
+2026-03-19 05:01:19.302 | INFO     | __main__:_trading_cycle:116 - ⏸️  [BTC/USDT] Market sideways — skip
+2026-03-19 05:01:34.304 | INFO     | __main__:_trading_cycle:105 - 📊 [ETH/USDT] Starting analysis...
+2026-03-19 05:01:46.003 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-5.99% | Vol: 0.03x
+2026-03-19 05:01:46.003 | INFO     | __main__:_trading_cycle:116 - ⏸️  [ETH/USDT] Market sideways — skip
+2026-03-19 05:02:01.007 | INFO     | __main__:_trading_cycle:105 - 📊 [SOL/USDT] Starting analysis...
+2026-03-19 05:02:11.823 | INFO     | agents.brain:analyze_regime:98 - AI Regime: SIDEWAYS | EMA: ↓ | Δ-4.85% | Vol: 0.00x
+2026-03-19 05:02:11.823 | INFO     | __main__:_trading_cycle:116 - ⏸️  [SOL/USDT] Market sideways — skip
+2026-03-19 05:02:41.828 | INFO     | __main__:_trading_cycle:105 - 📊 [BTC/USDT] Starting analysis...
+[2026-03-19 05:03:02] ⚠️  Process exited with code 0. Restarting in 10s...
+[2026-03-19 05:12:37] 🚀 Starting run #1...
+[2026-03-19 05:12:37] PID: 74744
+2026-03-19 05:12:38.632 | INFO     | __main__:__init__:59 - ⚔️  Atreides-1 Fase 2 Initialized
+2026-03-19 05:12:38.632 | INFO     | __main__:__init__:60 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | Min confidence: 75%
+2026-03-19 05:12:39.297 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:12:39.438 | INFO     | __main__:run:133 - Leverage 5x set for BTC/USDT
+2026-03-19 05:12:39.579 | INFO     | __main__:run:133 - Leverage 5x set for ETH/USDT
+2026-03-19 05:12:39.720 | INFO     | __main__:run:133 - Leverage 5x set for SOL/USDT
+2026-03-19 05:12:40.909 | INFO     | core.telegram_bot:start_polling:216 - 🤖 Telegram C2 bot started — listening for commands
+2026-03-19 05:12:42.470 | INFO     | __main__:run:140 - 🔄 Fase 2 loop started — 3 symbols, 3 timeframes each
+2026-03-19 05:12:42.614 | INFO     | core.circuit_breaker:update_equity:93 - 📌 Day start equity: $4991.69
+2026-03-19 05:12:42.615 | INFO     | __main__:_trading_cycle:258 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:12:43.361 | DEBUG    | __main__:_get_derivatives:118 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:13:25.925 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 85% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:13:25.925 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes (15M, 1H, 4H) show bearish EMA alignments, negative price changes, and RSI levels indicating oversold conditions, confirming a downward trend. The derivatives funding rate is neutral, not contradicting the bearish signals but lacking strong confirmation. Therefore, the market is in a bearish regime with high confidence due to timeframe consensus.
+2026-03-19 05:13:25.925 | INFO     | __main__:_trading_cycle:287 - [BTC/USDT] Regime: BEAR | Confidence: 85% | Source: r1
+2026-03-19 05:13:26.628 | INFO     | __main__:_has_open_position:201 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $2.8221
+2026-03-19 05:13:26.628 | INFO     | __main__:_trading_cycle:315 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:13:41.630 | INFO     | __main__:_trading_cycle:258 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:13:42.436 | DEBUG    | __main__:_get_derivatives:118 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:14:14.023 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 78% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:14:14.024 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 1H and 4H timeframes show strong bearish EMA alignments with oversold RSI in 1H, while 15M shows a short-term bullish EMA crossover but weakening momentum. Derivatives remain neutral, supporting bearish bias from higher timeframes despite countertrend 15M signal.
+2026-03-19 05:14:14.024 | INFO     | __main__:_trading_cycle:287 - [ETH/USDT] Regime: BEAR | Confidence: 78% | Source: r1
+2026-03-19 05:14:14.354 | INFO     | __main__:_has_open_position:201 - ⏸️  [ETH/USDT] SHORT | 0.465 contracts | 🔴 PnL: $-1.0786
+2026-03-19 05:14:14.354 | INFO     | __main__:_trading_cycle:315 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 05:14:29.356 | INFO     | __main__:_trading_cycle:258 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:14:30.170 | DEBUG    | __main__:_get_derivatives:118 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:14:44.425 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 78% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:14:44.426 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 1H and 4H timeframes show strong bearish EMA alignments with oversold/weak RSI, while 15M shows short-term bullish momentum. Derivatives remain neutral, supporting moderate confidence in bearish macro structure despite short-term bounce.
+2026-03-19 05:14:44.426 | INFO     | __main__:_trading_cycle:287 - [SOL/USDT] Regime: BEAR | Confidence: 78% | Source: r1
+2026-03-19 05:14:44.574 | INFO     | __main__:_has_open_position:201 - ⏸️  [SOL/USDT] SHORT | 6.98 contracts | 🔴 PnL: $-2.3362
+2026-03-19 05:14:44.575 | INFO     | __main__:_trading_cycle:315 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 05:15:14.929 | INFO     | __main__:_trading_cycle:258 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:15:15.645 | DEBUG    | __main__:_get_derivatives:118 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:15:53.543 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 82% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:15:53.543 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes show bearish EMA alignments with declining prices and extreme oversold RSI (15.8) on 1H, signaling strong downward momentum. Neutral funding rates and low volume on higher timeframes suggest weak conviction despite technical confirmation, tempering confidence slightly.
+2026-03-19 05:15:53.543 | INFO     | __main__:_trading_cycle:287 - [BTC/USDT] Regime: BEAR | Confidence: 82% | Source: r1
+2026-03-19 05:15:53.891 | INFO     | __main__:_has_open_position:201 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $2.4650
+2026-03-19 05:15:53.891 | INFO     | __main__:_trading_cycle:315 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:16:08.893 | INFO     | __main__:_trading_cycle:258 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:16:09.710 | DEBUG    | __main__:_get_derivatives:118 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:16:20.781 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: SIDEWAYS | Confidence: 58% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:16:20.782 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 15M shows bullish EMA crossover but weak volume/RSI neutrality, while 1H/4H maintain strong bearish EMA alignments with oversold RSI divergence. Derivatives lack directional bias, creating conflicting multi-TF signals.
+2026-03-19 05:16:20.782 | INFO     | __main__:_trading_cycle:287 - [ETH/USDT] Regime: SIDEWAYS | Confidence: 58% | Source: r1
+2026-03-19 05:16:21.508 | INFO     | __main__:_trading_cycle:303 - ⏸️  [ETH/USDT] SIDEWAYS — skip
+2026-03-19 05:16:36.510 | INFO     | __main__:_trading_cycle:258 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:16:37.305 | DEBUG    | __main__:_get_derivatives:118 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:17:46.517 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 80% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:17:46.518 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 15M shows bullish short-term momentum, but 1H and 4H EMAs indicate bearish primary and macro trends. Derivatives are neutral, providing weak confirmation, so the regime is bearish with moderate confidence from two aligned timeframes.
+2026-03-19 05:17:46.518 | INFO     | __main__:_trading_cycle:287 - [SOL/USDT] Regime: BEAR | Confidence: 80% | Source: r1
+2026-03-19 05:17:46.855 | INFO     | __main__:_has_open_position:201 - ⏸️  [SOL/USDT] SHORT | 6.98 contracts | 🔴 PnL: $-3.3902
+2026-03-19 05:17:46.856 | INFO     | __main__:_trading_cycle:315 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 05:18:17.231 | INFO     | __main__:_trading_cycle:258 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:18:17.945 | DEBUG    | __main__:_get_derivatives:118 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:19:13.206 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 85% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:19:13.206 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes (15M, 1H, 4H) show bearish EMA crossovers and negative price changes, indicating aligned downward momentum. The 1H RSI is oversold at 15.8, reinforcing strong selling pressure, while derivatives funding rate is neutral and does not contradict the bearish trend. Thus, the market is in a bearish regime with high confidence, though slightly tempered by lack of derivatives confirmation.
+2026-03-19 05:19:13.206 | INFO     | __main__:_trading_cycle:287 - [BTC/USDT] Regime: BEAR | Confidence: 85% | Source: r1
+2026-03-19 05:19:13.551 | INFO     | __main__:_has_open_position:201 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $1.0353
+2026-03-19 05:19:13.551 | INFO     | __main__:_trading_cycle:315 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:19:28.553 | INFO     | __main__:_trading_cycle:258 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:19:29.296 | DEBUG    | __main__:_get_derivatives:118 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:19:42.891 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: SIDEWAYS | Confidence: 55% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:19:42.892 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 15M shows bullish EMA crossover but weak momentum (-0.53% price change), while 1H/4H maintain bearish EMA structures with deeply oversold hourly RSI. Neutral funding rates and conflicting timeframe directions (1 bullish vs 2 bearish) indicate consolidation within a broader downtrend.
+2026-03-19 05:19:42.892 | INFO     | __main__:_trading_cycle:287 - [ETH/USDT] Regime: SIDEWAYS | Confidence: 55% | Source: r1
+2026-03-19 05:19:42.892 | INFO     | __main__:_trading_cycle:303 - ⏸️  [ETH/USDT] SIDEWAYS — skip
+2026-03-19 05:19:57.894 | INFO     | __main__:_trading_cycle:258 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:19:58.655 | DEBUG    | __main__:_get_derivatives:118 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:20:10.503 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: SIDEWAYS | Confidence: 45% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:20:10.504 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 15M shows bullish momentum but 1H/4H maintain bearish EMA structures with divergent RSI readings. Derivatives show neutral funding rates without clear directional bias, and critical timeframe trends conflict.
+2026-03-19 05:20:10.504 | INFO     | __main__:_trading_cycle:287 - [SOL/USDT] Regime: SIDEWAYS | Confidence: 45% | Source: r1
+2026-03-19 05:20:11.269 | INFO     | __main__:_trading_cycle:303 - ⏸️  [SOL/USDT] SIDEWAYS — skip
+2026-03-19 05:20:41.578 | INFO     | __main__:_trading_cycle:258 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:20:42.226 | DEBUG    | __main__:_get_derivatives:118 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:21:40.203 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 85% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:21:40.204 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes exhibit bearish EMA alignments with accelerating downside momentum (1H RSI 16.2 extreme oversold). Despite neutral funding rates, the unanimous multi-TF structural weakness overrides derivatives ambiguity, though lack of OI data slightly limits conviction.
+2026-03-19 05:21:40.204 | INFO     | __main__:_trading_cycle:287 - [BTC/USDT] Regime: BEAR | Confidence: 85% | Source: r1
+2026-03-19 05:21:40.536 | INFO     | __main__:_has_open_position:201 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $2.1036
+2026-03-19 05:21:40.537 | INFO     | __main__:_trading_cycle:315 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:21:55.539 | INFO     | __main__:_trading_cycle:258 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:21:56.293 | DEBUG    | __main__:_get_derivatives:118 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+[2026-03-19 05:22:52] ⚠️  Process exited with code 143. Restarting in 10s...
+[2026-03-19 05:25:30] 🚀 Starting run #1...
+[2026-03-19 05:25:30] PID: 74812
+2026-03-19 05:25:32.810 | INFO     | __main__:__init__:61 - ⚔️  Atreides-1 Fase 2 Initialized
+2026-03-19 05:25:32.810 | INFO     | __main__:__init__:62 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | Min confidence: 75%
+2026-03-19 05:25:33.505 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:25:33.647 | INFO     | __main__:run:169 - Leverage 5x set for BTC/USDT
+2026-03-19 05:25:33.787 | INFO     | __main__:run:169 - Leverage 5x set for ETH/USDT
+2026-03-19 05:25:33.928 | INFO     | __main__:run:169 - Leverage 5x set for SOL/USDT
+2026-03-19 05:25:34.661 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:25:36.660 | INFO     | __main__:run:176 - 🔄 Fase 2 loop started — 3 symbols, 3 timeframes each
+2026-03-19 05:25:36.803 | INFO     | __main__:_trading_cycle:294 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:25:37.511 | DEBUG    | __main__:_get_derivatives:154 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:26:26.786 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 85% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:26:26.787 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes (15M, 1H, 4H) show bearish EMA alignments with price below key moving averages and negative changes, confirming a downward trend. However, the derivatives data is neutral with a funding rate of 0.0100%, lacking strong confirmation for bearish sentiment, which moderates confidence.
+2026-03-19 05:26:26.787 | INFO     | __main__:_trading_cycle:323 - [BTC/USDT] Regime: BEAR | Confidence: 85% | Source: r1
+2026-03-19 05:26:27.486 | INFO     | __main__:_has_open_position:237 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $2.1828
+2026-03-19 05:26:27.486 | INFO     | __main__:_trading_cycle:351 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:26:42.490 | INFO     | __main__:_trading_cycle:294 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:26:43.298 | DEBUG    | __main__:_get_derivatives:154 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:27:44.031 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 76% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:27:44.032 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 1H and 4H timeframes maintain bearish EMA structures with price below key moving averages, while 15M shows conflicting bullish momentum. Neutral derivatives lack directional confirmation, but longer-term bearish alignment outweighs short-term bounce signals.
+2026-03-19 05:27:44.032 | INFO     | __main__:_trading_cycle:323 - [ETH/USDT] Regime: BEAR | Confidence: 76% | Source: r1
+2026-03-19 05:27:44.381 | INFO     | __main__:_has_open_position:237 - ⏸️  [ETH/USDT] SHORT | 0.465 contracts | 🔴 PnL: $-2.5898
+2026-03-19 05:27:44.382 | INFO     | __main__:_trading_cycle:351 - ⏸️  [ETH/USDT] Posisi aktif — skip
+2026-03-19 05:27:59.384 | INFO     | __main__:_trading_cycle:294 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:28:00.172 | DEBUG    | __main__:_get_derivatives:154 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:29:10.278 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 80% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:29:10.278 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: 15M timeframe shows bullish momentum with EMA crossover, but 1H and 4H timeframes are bearish with EMAs in downtrend alignment and oversold RSI on 1H. Derivatives are neutral, providing no strong confirmation, yet the majority bearish alignment in longer timeframes indicates a bearish regime.
+2026-03-19 05:29:10.279 | INFO     | __main__:_trading_cycle:323 - [SOL/USDT] Regime: BEAR | Confidence: 80% | Source: r1
+2026-03-19 05:29:10.629 | INFO     | __main__:_has_open_position:237 - ⏸️  [SOL/USDT] SHORT | 6.98 contracts | 🔴 PnL: $-2.5634
+2026-03-19 05:29:10.629 | INFO     | __main__:_trading_cycle:351 - ⏸️  [SOL/USDT] Posisi aktif — skip
+2026-03-19 05:29:40.990 | INFO     | __main__:_trading_cycle:294 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:29:41.666 | DEBUG    | __main__:_get_derivatives:154 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:30:46.501 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 82% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:30:46.501 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes show bearish EMA alignment (8 below 21/50) with strongest momentum on 1H (RSI 16.1 oversold). Derivatives lack confirmation (neutral funding) but multi-TF consensus dominates. Confidence tempered slightly by neutral funding context.
+2026-03-19 05:30:46.502 | INFO     | __main__:_trading_cycle:323 - [BTC/USDT] Regime: BEAR | Confidence: 82% | Source: r1
+2026-03-19 05:30:46.822 | INFO     | __main__:_has_open_position:237 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $1.5888
+2026-03-19 05:30:46.823 | INFO     | __main__:_trading_cycle:351 - ⏸️  [BTC/USDT] Posisi aktif — skip
+[2026-03-19 05:30:54] 🚀 Starting run #1...
+[2026-03-19 05:30:54] PID: 74842
+2026-03-19 05:30:56.205 | INFO     | __main__:__init__:62 - ⚔️  Atreides-1 Fase 2 Initialized
+2026-03-19 05:30:56.205 | INFO     | __main__:__init__:63 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | Min confidence: 75%
+2026-03-19 05:30:56.917 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:30:57.065 | INFO     | __main__:run:186 - Leverage 5x set for BTC/USDT
+2026-03-19 05:30:57.208 | INFO     | __main__:run:186 - Leverage 5x set for ETH/USDT
+2026-03-19 05:30:57.352 | INFO     | __main__:run:186 - Leverage 5x set for SOL/USDT
+2026-03-19 05:30:58.065 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:31:00.083 | INFO     | __main__:run:193 - 🔄 Fase 2 loop started — 3 symbols, 3 timeframes each
+2026-03-19 05:31:00.870 | DEBUG    | __main__:_refresh_positions_cache:135 - Position cache refreshed: 3 active
+2026-03-19 05:31:00.870 | INFO     | __main__:_trading_cycle:314 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:31:01.541 | DEBUG    | __main__:_get_derivatives:171 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:31:57.333 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: BEAR | Confidence: 85% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:31:57.333 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: All three timeframes (15M, 1H, 4H) show bearish EMA alignments with price below key moving averages, indicating sustained selling pressure and agreement on a downtrend. The 1H RSI is oversold at 16.1, hinting at possible short-term exhaustion, but the multi-timeframe consistency supports a bearish regime. Derivatives funding rate is neutral, not strongly confirming but also not opposing the bearish bias.
+2026-03-19 05:31:57.333 | INFO     | __main__:_trading_cycle:343 - [BTC/USDT] Regime: BEAR | Confidence: 85% | Source: r1
+2026-03-19 05:31:57.678 | INFO     | __main__:_has_open_position:257 - ⏸️  [BTC/USDT] SHORT | 0.017 contracts | 🟢 PnL: $2.6872
+2026-03-19 05:31:57.678 | INFO     | __main__:_trading_cycle:371 - ⏸️  [BTC/USDT] Posisi aktif — skip
+2026-03-19 05:32:12.681 | INFO     | __main__:_trading_cycle:314 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:32:13.562 | DEBUG    | __main__:_get_derivatives:171 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:33:00.447 | INFO     | agents.brain:analyze_regime:258 - R1 Analysis: SIDEWAYS | Confidence: 65% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH
+2026-03-19 05:33:00.447 | DEBUG    | agents.brain:analyze_regime:265 - R1 Reasoning: Short-term 15M EMA crossover is bullish, but 1H and 4H EMAs are bearish with significant price declines, showing conflicting directional signals. Derivatives funding rate is neutral, providing no confirmation. This mix of bullish and bearish indicators across timeframes suggests a sideways market regime.
+2026-03-19 05:33:00.447 | INFO     | __main__:_trading_cycle:343 - [ETH/USDT] Regime: SIDEWAYS | Confidence: 65% | Source: r1
+2026-03-19 05:33:00.448 | INFO     | __main__:_trading_cycle:359 - ⏸️  [ETH/USDT] SIDEWAYS — skip
+2026-03-19 05:33:15.450 | INFO     | __main__:_trading_cycle:314 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:33:16.258 | DEBUG    | __main__:_get_derivatives:171 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+[2026-03-19 05:37:44] 🚀 Starting run #1...
+[2026-03-19 05:37:44] PID: 74901
+2026-03-19 05:37:46.405 | INFO     | __main__:__init__:66 - ⚔️  Atreides-1 Fase 3C Initialized
+2026-03-19 05:37:46.405 | INFO     | __main__:__init__:67 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | Min confidence: 75%
+2026-03-19 05:37:47.529 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:37:47.668 | INFO     | __main__:run:190 - Leverage 5x set for BTC/USDT
+2026-03-19 05:37:47.808 | INFO     | __main__:run:190 - Leverage 5x set for ETH/USDT
+2026-03-19 05:37:47.954 | INFO     | __main__:run:190 - Leverage 5x set for SOL/USDT
+2026-03-19 05:37:48.703 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:37:50.690 | INFO     | __main__:run:197 - 🔄 Fase 2 loop started — 3 symbols, 3 timeframes each
+2026-03-19 05:37:51.631 | DEBUG    | __main__:_refresh_positions_cache:139 - Position cache refreshed: 3 active
+2026-03-19 05:37:51.632 | INFO     | __main__:_trading_cycle:318 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:37:52.308 | DEBUG    | __main__:_get_derivatives:175 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:37:52.534 | DEBUG    | utils.news_fetcher:get_crypto_news:189 - [BTC] News fetch failed: 429, message='Attempt to decode JSON with unexpected mimetype: text/html', url='https://cryptopanic.com/api/v1/posts/?auth_token=anonymous&currencies=BTC&kind=news&filter=hot'
+2026-03-19 05:37:53.129 | DEBUG    | utils.news_fetcher:get_fear_greed:92 - Fear & Greed: 26/100 (Fear) → MILD_BULLISH
+2026-03-19 05:37:53.129 | DEBUG    | __main__:_trading_cycle:339 - [BTC/USDT] Sentiment: F&G=26/100 (MILD_BULLISH) | News=NEUTRAL (50%)
+2026-03-19 05:39:06.507 | INFO     | agents.brain:analyze_regime:249 - R1 Analysis: SIDEWAYS | Confidence: 62% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH | News: ✅
+2026-03-19 05:39:06.508 | DEBUG    | agents.brain:analyze_regime:255 - R1 Reasoning: All timeframes show bearish EMA trends with oversold RSI on 1H, but Fear sentiment (near contrarian bull threshold) and mild bullish trading bias create divergence. Neutral derivatives and low-volume selling pressure suggest consolidation outweighs directional conviction.
+2026-03-19 05:39:06.508 | INFO     | __main__:_trading_cycle:360 - [BTC/USDT] Regime: SIDEWAYS | Confidence: 62% | Source: r1
+2026-03-19 05:39:06.508 | INFO     | __main__:_trading_cycle:376 - ⏸️  [BTC/USDT] SIDEWAYS — skip
+2026-03-19 05:39:21.512 | INFO     | __main__:_trading_cycle:318 - 📊 [ETH/USDT] Starting multi-TF analysis...
+2026-03-19 05:39:22.308 | DEBUG    | __main__:_get_derivatives:175 - [ETH/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:39:22.547 | DEBUG    | utils.news_fetcher:get_crypto_news:189 - [ETH] News fetch failed: 429, message='Attempt to decode JSON with unexpected mimetype: text/html', url='https://cryptopanic.com/api/v1/posts/?auth_token=anonymous&currencies=ETH&kind=news&filter=hot'
+2026-03-19 05:39:22.547 | DEBUG    | __main__:_trading_cycle:339 - [ETH/USDT] Sentiment: F&G=26/100 (MILD_BULLISH) | News=NEUTRAL (50%)
+2026-03-19 05:39:36.768 | INFO     | agents.brain:analyze_regime:249 - R1 Analysis: SIDEWAYS | Confidence: 52% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH | News: ✅
+2026-03-19 05:39:36.769 | DEBUG    | agents.brain:analyze_regime:255 - R1 Reasoning: Mixed technical signals with 15M bullish EMA crossover conflicting with strong bearish structures in 1H/4H EMAs. Mild bullish contrarian bias from Fear sentiment (26/100) partially offsets weak technical alignment. Neutral derivatives and timeframes divergence limit confidence in directional bias.
+2026-03-19 05:39:36.769 | INFO     | __main__:_trading_cycle:360 - [ETH/USDT] Regime: SIDEWAYS | Confidence: 52% | Source: r1
+2026-03-19 05:39:36.769 | INFO     | __main__:_trading_cycle:376 - ⏸️  [ETH/USDT] SIDEWAYS — skip
+2026-03-19 05:39:51.773 | INFO     | __main__:_trading_cycle:318 - 📊 [SOL/USDT] Starting multi-TF analysis...
+2026-03-19 05:39:52.567 | DEBUG    | __main__:_get_derivatives:175 - [SOL/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:39:52.795 | DEBUG    | utils.news_fetcher:get_crypto_news:189 - [SOL] News fetch failed: 429, message='Attempt to decode JSON with unexpected mimetype: text/html', url='https://cryptopanic.com/api/v1/posts/?auth_token=anonymous&currencies=SOL&kind=news&filter=hot'
+2026-03-19 05:39:52.796 | DEBUG    | __main__:_trading_cycle:339 - [SOL/USDT] Sentiment: F&G=26/100 (MILD_BULLISH) | News=NEUTRAL (50%)
+2026-03-19 05:41:04.512 | INFO     | agents.brain:analyze_regime:249 - R1 Analysis: SIDEWAYS | Confidence: 55% | 15m: BULLISH | 1h: BEARISH | 4h: BEARISH | News: ✅
+2026-03-19 05:41:04.512 | DEBUG    | agents.brain:analyze_regime:255 - R1 Reasoning: Higher timeframes (1H and 4H) show bearish trends with oversold RSI on 1H, while short-term 15M momentum is bullish, indicating market indecision. Sentiment is mildly bullish due to fear, but derivatives are neutral and news sentiment is not supportive. Conflicting technical and sentiment signals point to a sideways consolidation phase.
+2026-03-19 05:41:04.512 | INFO     | __main__:_trading_cycle:360 - [SOL/USDT] Regime: SIDEWAYS | Confidence: 55% | Source: r1
+2026-03-19 05:41:04.512 | INFO     | __main__:_trading_cycle:376 - ⏸️  [SOL/USDT] SIDEWAYS — skip
+2026-03-19 05:41:35.309 | DEBUG    | __main__:_refresh_positions_cache:139 - Position cache refreshed: 3 active
+2026-03-19 05:41:35.309 | INFO     | __main__:_trading_cycle:318 - 📊 [BTC/USDT] Starting multi-TF analysis...
+2026-03-19 05:41:35.986 | DEBUG    | __main__:_get_derivatives:175 - [BTC/USDT] Derivatives fetch failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:41:36.241 | DEBUG    | utils.news_fetcher:get_crypto_news:189 - [BTC] News fetch failed: 404, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://cryptopanic.com/api/v1/posts/?auth_token=anonymous&currencies=BTC&kind=news&filter=hot'
+2026-03-19 05:41:36.242 | DEBUG    | __main__:_trading_cycle:339 - [BTC/USDT] Sentiment: F&G=26/100 (MILD_BULLISH) | News=NEUTRAL (50%)
+[2026-03-19 05:48:25] 🚀 Starting run #1...
+[2026-03-19 05:48:25] PID: 75093
+2026-03-19 05:48:27.625 | INFO     | __main__:__init__:79 - ⚔️  Atreides-1 Fase 3 Initialized
+2026-03-19 05:48:27.625 | INFO     | __main__:__init__:80 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | CB: 2.0% | Target: 1.0%/day
+2026-03-19 05:48:28.318 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:48:28.459 | INFO     | __main__:run:193 - Leverage 5x set for BTC/USDT
+2026-03-19 05:48:28.600 | INFO     | __main__:run:193 - Leverage 5x set for ETH/USDT
+2026-03-19 05:48:28.742 | INFO     | __main__:run:193 - Leverage 5x set for SOL/USDT
+2026-03-19 05:48:29.489 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:48:31.510 | INFO     | __main__:run:201 - 🔄 Fase 3 loop started | Throttle: NORMAL
+2026-03-19 05:48:32.279 | DEBUG    | __main__:_refresh_positions_cache:157 - Position cache: 3 active
+2026-03-19 05:48:32.279 | INFO     | __main__:_trading_cycle:375 - 📊 [BTC/USDT] Analysis started...
+2026-03-19 05:48:32.676 | DEBUG    | utils.news_fetcher:get_long_short_ratio:318 - [BTC/USDT] L/S Ratio failed: Exchange.fetch_long_short_ratio() got an unexpected keyword argument 'limit'
+2026-03-19 05:48:32.849 | DEBUG    | __main__:_get_derivatives:179 - [BTC/USDT] Derivatives failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:48:32.948 | DEBUG    | utils.news_fetcher:get_coingecko_news:176 - CoinGecko News [BTC]: NEUTRAL | Bull:0 Bear:0
+2026-03-19 05:48:33.536 | DEBUG    | utils.news_fetcher:get_fear_greed:92 - Fear & Greed: 26/100 (Fear) → MILD_BULLISH
+2026-03-19 05:48:33.639 | DEBUG    | utils.news_fetcher:get_reddit_sentiment:253 - Reddit [BTC]: BULLISH | Ratio: 0.92 | Posts: 3
+2026-03-19 05:48:33.640 | INFO     | __main__:_trading_cycle:402 - [BTC/USDT] Sentiment: F&G=26/100 | News=NEUTRAL | Reddit=BULLISH | L/S=NEUTRAL
+[2026-03-19 05:50:00] 🚀 Starting run #1...
+[2026-03-19 05:50:00] PID: 75143
+2026-03-19 05:50:02.367 | INFO     | __main__:__init__:79 - ⚔️  Atreides-1 Fase 3 Initialized
+2026-03-19 05:50:02.367 | INFO     | __main__:__init__:80 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | CB: 2.0% | Target: 1.0%/day
+2026-03-19 05:50:03.086 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:50:03.226 | INFO     | __main__:run:193 - Leverage 5x set for BTC/USDT
+2026-03-19 05:50:03.369 | INFO     | __main__:run:193 - Leverage 5x set for ETH/USDT
+2026-03-19 05:50:03.516 | INFO     | __main__:run:193 - Leverage 5x set for SOL/USDT
+2026-03-19 05:50:04.252 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:50:06.279 | INFO     | __main__:run:201 - 🔄 Fase 3 loop started | Throttle: NORMAL
+2026-03-19 05:50:07.192 | DEBUG    | __main__:_refresh_positions_cache:157 - Position cache: 3 active
+2026-03-19 05:50:07.192 | INFO     | __main__:_trading_cycle:375 - 📊 [BTC/USDT] Analysis started...
+2026-03-19 05:50:07.548 | DEBUG    | utils.news_fetcher:get_long_short_ratio:318 - [BTC/USDT] L/S Ratio failed: binanceusdm fetchLongShortRatio() is not supported yet
+2026-03-19 05:50:07.724 | DEBUG    | __main__:_get_derivatives:179 - [BTC/USDT] Derivatives failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:50:07.822 | DEBUG    | utils.news_fetcher:get_coingecko_news:176 - CoinGecko News [BTC]: NEUTRAL | Bull:0 Bear:0
+2026-03-19 05:50:08.313 | DEBUG    | utils.news_fetcher:get_fear_greed:92 - Fear & Greed: 26/100 (Fear) → MILD_BULLISH
+2026-03-19 05:50:08.815 | DEBUG    | utils.news_fetcher:get_reddit_sentiment:253 - Reddit [BTC]: BULLISH | Ratio: 0.93 | Posts: 3
+2026-03-19 05:50:08.816 | INFO     | __main__:_trading_cycle:402 - [BTC/USDT] Sentiment: F&G=26/100 | News=NEUTRAL | Reddit=BULLISH | L/S=NEUTRAL
+[2026-03-19 05:52:44] 🚀 Starting run #1...
+[2026-03-19 05:52:44] PID: 75183
+2026-03-19 05:52:46.425 | INFO     | __main__:__init__:79 - ⚔️  Atreides-1 Fase 3 Initialized
+2026-03-19 05:52:46.425 | INFO     | __main__:__init__:80 - Symbols: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT'] | TF: 15m/1h/4h | Lev: 5x | RR: 1:2.0 | CB: 2.0% | Target: 1.0%/day
+2026-03-19 05:52:47.090 | INFO     | core.binance_client:load_markets:39 - Markets loaded successfully
+2026-03-19 05:52:47.222 | INFO     | __main__:run:193 - Leverage 5x set for BTC/USDT
+2026-03-19 05:52:47.361 | INFO     | __main__:run:193 - Leverage 5x set for ETH/USDT
+2026-03-19 05:52:47.492 | INFO     | __main__:run:193 - Leverage 5x set for SOL/USDT
+2026-03-19 05:52:48.206 | INFO     | core.telegram_bot:start_polling:465 - 🤖 Telegram C2 started — /status /pause /resume /stop /close /closeall
+2026-03-19 05:52:50.219 | INFO     | __main__:run:201 - 🔄 Fase 3 loop started | Throttle: NORMAL
+2026-03-19 05:52:51.078 | DEBUG    | __main__:_refresh_positions_cache:157 - Position cache: 3 active
+2026-03-19 05:52:51.079 | INFO     | __main__:_trading_cycle:375 - 📊 [BTC/USDT] Analysis started...
+2026-03-19 05:52:51.523 | DEBUG    | utils.news_fetcher:get_open_interest_sentiment:323 - [BTC/USDT] OI sentiment failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:52:51.609 | DEBUG    | __main__:_get_derivatives:179 - [BTC/USDT] Derivatives failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:52:51.756 | DEBUG    | utils.news_fetcher:get_coingecko_news:176 - CoinGecko News [BTC]: NEUTRAL | Bull:0 Bear:0
+2026-03-19 05:52:52.229 | DEBUG    | utils.news_fetcher:get_fear_greed:92 - Fear & Greed: 26/100 (Fear) → MILD_BULLISH
+2026-03-19 05:52:52.361 | DEBUG    | utils.news_fetcher:get_reddit_sentiment:253 - Reddit [BTC]: BULLISH | Ratio: 0.93 | Posts: 3
+2026-03-19 05:52:52.363 | INFO     | __main__:_trading_cycle:401 - [BTC/USDT] Sentiment: F&G=26/100 | News=NEUTRAL | Reddit=BULLISH | OI=NEUTRAL
+2026-03-19 05:54:02.999 | INFO     | agents.brain:analyze_regime:242 - Confidence 65% < 75% — downgrading BEAR → SIDEWAYS
+2026-03-19 05:54:03.000 | INFO     | agents.brain:analyze_regime:249 - R1 Analysis: SIDEWAYS | Confidence: 65% | 15m: BEARISH | 1h: BEARISH | 4h: BEARISH | News: ✅
+2026-03-19 05:54:03.000 | DEBUG    | agents.brain:analyze_regime:255 - R1 Reasoning: All technical timeframes show bearish EMA alignments with oversold RSI on 1H/4H, signaling strong downside momentum. However, mixed sentiment (Fear & Greed contrarian bullish, Reddit bullish) partially offsets confirmation, reducing confidence in sustained bearish acceleration.
+2026-03-19 05:54:03.000 | INFO     | __main__:_trading_cycle:423 - [BTC/USDT] R1: SIDEWAYS | Conf: 65% | Threshold: 75% | Src: r1
+2026-03-19 05:54:03.000 | INFO     | __main__:_trading_cycle:440 - ⏸️  [BTC/USDT] SIDEWAYS — skip
+2026-03-19 05:54:18.002 | INFO     | __main__:_trading_cycle:375 - 📊 [ETH/USDT] Analysis started...
+2026-03-19 05:54:18.575 | DEBUG    | utils.news_fetcher:get_open_interest_sentiment:323 - [ETH/USDT] OI sentiment failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:54:18.656 | DEBUG    | __main__:_get_derivatives:179 - [ETH/USDT] Derivatives failed (non-critical): binanceusdm does not have a testnet/sandbox URL for fapiData endpoints
+2026-03-19 05:54:18.777 | DEBUG    | utils.news_fetcher:get_coingecko_news:176 - CoinGecko News [ETH]: NEUTRAL | Bull:0 Bear:0
+2026-03-19 05:54:19.842 | DEBUG    | utils.news_fetcher:get_reddit_sentiment:253 - Reddit [ETH]: BULLISH | Ratio: 0.96 | Posts: 1
+2026-03-19 05:54:19.842 | INFO     | __main__:_trading_cycle:401 - [ETH/USDT] Sentiment: F&G=26/100 | News=NEUTRAL | Reddit=BULLISH | OI=NEUTRAL
