@@ -77,27 +77,15 @@ class AtreidesTrader:
         position_value = usdt_balance * self.risk_percent / 100
         amount = position_value / current_price
         
-        # Round amount using BinanceClient precision
-        amount = self.client.round_amount(self.symbol, amount)
+        # Get min_amount dynamically
+        min_amount = self.client.exchange.markets[self.symbol]['limits']['amount']['min']
         
-        # Safety check: Ensure minimum amount
-        min_amount = 0.001  # Default fallback
-        try:
-            # Try to get from market limits if available
-            market = self.client.exchange.markets.get(self.symbol, {})
-            if market and 'limits' in market and 'amount' in market['limits']:
-                min_amount = market['limits']['amount'].get('min', 0.001)
-        except Exception:
-            pass
+        # Use max function to enforce minimum
+        final_amount = max(self.client.round_amount(self.symbol, amount), min_amount)
         
-        if amount < min_amount:
-            logger.warning(f"Calculated amount {amount} below minimum {min_amount}. Using minimum.")
-            amount = min_amount
-        
-        # Check if we have sufficient balance for minimum position
-        required_balance = amount * current_price
-        if usdt_balance < required_balance:
-            logger.error(f"Insufficient balance. Required: {required_balance:.2f} USDT, Available: {usdt_balance:.2f} USDT")
+        # Check balance with leverage consideration
+        if (final_amount * current_price / self.leverage) > usdt_balance:
+            logger.error("Saldo tidak cukup untuk minimum lot")
             return
         
         # ATR-based Stop Loss (2x ATR)
@@ -116,7 +104,7 @@ class AtreidesTrader:
         await self.risk_manager.execute_atomic_order(
             symbol=self.symbol,
             side=side,
-            amount=amount,
+            amount=final_amount,
             stop_loss_price=sl_price,
             order_type='MARKET'
         )
