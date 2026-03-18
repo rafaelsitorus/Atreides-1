@@ -77,19 +77,29 @@ class AtreidesTrader:
         position_value = usdt_balance * self.risk_percent / 100
         amount = position_value / current_price
         
-        # Get min_amount dynamically and clamp position size
+        # Get precise minimum amount and validate position size
         market_info = self.client.exchange.market(self.symbol)
         min_amount = market_info['limits']['amount']['min']
         risk_based_amount = self.client.round_amount(self.symbol, amount)
         
-        # Enforce minimum position size using clamp logic
+        # Enforce minimum position size with precise rounding
         final_amount = max(risk_based_amount, min_amount)
+        final_amount = self.client.round_amount(self.symbol, final_amount)  # Final precision check
+        
+        logger.debug(f"Position sizing: "
+                     f"Risk-based: {risk_based_amount:.6f} | "
+                     f"Min: {min_amount:.6f} | "
+                     f"Final: {final_amount:.6f}")
         
         # Validate margin requirements with leverage
         required_margin = (final_amount * current_price) / self.leverage
         if required_margin > usdt_balance:
-            logger.warning(f"⚠️ Insufficient margin for minimum position size ({final_amount} BTC) - skipping trade")
+            logger.warning(f"⚠️ Insufficient margin for position size {final_amount:.6f} BTC - skipping trade")
             logger.warning(f"Available: ${usdt_balance:.2f} | Required: ${required_margin:.2f}")
+            return
+        
+        if final_amount < min_amount:
+            logger.error(f"🚨 Position size {final_amount:.6f} BTC below minimum {min_amount:.6f} BTC")
             return
         
         # ATR-based Stop Loss (2x ATR)
